@@ -9,7 +9,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using WatermarkToImage.Models;
-using Windows.UI.Xaml.Media.Imaging;
+//using Windows.UI.Xaml.Media.Imaging;
 
 namespace WatermarkToImage.Controllers
 {
@@ -38,13 +38,15 @@ namespace WatermarkToImage.Controllers
             int width = img.Width;
             int height = img.Height;
 
-            int fontSize = (width > height ? height : width) / 9;
-            Point textPosition = new Point(height / 3, (width / 3));
+            int fontSize = 30;
+            Point textPosition = new Point(203,184);
+            Point textPosition2 = new Point(103,220);
             Font textFont = new Font("Comic Sans MS", fontSize, FontStyle.Bold, GraphicsUnit.Pixel);
             Color color = Color.FromArgb(200, 204, 0, 0);
             SolidBrush brush = new SolidBrush(color);
             Graphics graphics = Graphics.FromImage(img);
             graphics.DrawString("Test Text", textFont, brush, textPosition);
+            graphics.DrawString("Shariful", textFont, brush, textPosition2);
             graphics.Dispose();
             //img.Save(targetP);
             string imgB64 = ImageToBase64(img);
