@@ -5,10 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\testPic.jpg" />
     <Content Remove="wwwroot\testPic2.jpg" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\testPic.jpg" />
     <None Include="wwwroot\testPic2.jpg" />
   </ItemGroup>
 
