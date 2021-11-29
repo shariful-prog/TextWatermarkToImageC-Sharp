@@ -87,6 +87,7 @@ namespace WatermarkToImage.Controllers
             g.Dispose();
             bmp.Save("../drawpic.jpg");
   
+            //new test
 
             MemoryStream ms = new MemoryStream();
             bmp.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
