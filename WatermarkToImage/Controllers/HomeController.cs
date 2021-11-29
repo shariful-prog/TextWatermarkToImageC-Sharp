@@ -82,7 +82,7 @@ namespace WatermarkToImage.Controllers
 
             g.DrawString(certificateId, font_Certificate, brush_Name, point_Certificate);
 
-
+            // Nothing just checking 
 
             g.Dispose();
             bmp.Save("../drawpic.jpg");
